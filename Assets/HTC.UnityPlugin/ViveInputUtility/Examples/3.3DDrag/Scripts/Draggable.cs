@@ -160,9 +160,6 @@ public class Draggable : GrabbableBase<Draggable.Grabber>
         switch (eventData.button)
         {
             case PointerEventData.InputButton.Middle:
-            case PointerEventData.InputButton.Right:
-                hitDistance = Mathf.Min(eventData.pointerPressRaycast.distance, m_initGrabDistance);
-                break;
             case PointerEventData.InputButton.Left:
                 hitDistance = eventData.pointerPressRaycast.distance;
                 break;

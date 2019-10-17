@@ -65,6 +65,7 @@ namespace HTC.UnityPlugin.Vive
             buttonEventDataList.Add(new VivePointerEventData(this, EventSystem.current, m_mouseButtonRight, PointerEventData.InputButton.Right));
             buttonEventDataList.Add(new VivePointerEventData(this, EventSystem.current, m_mouseButtonMiddle, PointerEventData.InputButton.Middle));
 
+
             FilterOutAssignedButton();
 
             var mouseBtn = PointerEventData.InputButton.Middle + 1;
