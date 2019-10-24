@@ -14,20 +14,5 @@ public class Cube : MonoBehaviour
     {
         drag = GetComponent<Draggable>();
     }
-    public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log(eventData.button);
-    }
-
-    public void Grabbed()
-    {
-        OnDrag(drag.currentGrabber.eventData);
-
-    }
-
-    public void Grab(PointerEventData _event)
-    {
-
-    }
 
 }

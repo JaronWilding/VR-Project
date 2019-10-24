@@ -51,7 +51,8 @@ public class Draggable : GrabbableBase<Draggable.Grabber>
             }
         }
 
-        public RigidPose grabOffset { get { return grabber2hit * hit2pivot; } set { } }
+        //public RigidPose grabOffset { get { return grabber2hit * hit2pivot; } set { } }
+        public RigidPose grabOffset { get { return grabber2hit; } set { } }
 
         public RigidPose grabber2hit { get; set; }
 
@@ -169,6 +170,7 @@ public class Draggable : GrabbableBase<Draggable.Grabber>
 
         var grabber = Grabber.Get(eventData);
         grabber.grabber2hit = new RigidPose(new Vector3(0f, 0f, hitDistance), Quaternion.identity);
+        //grabber.hit2pivot = RigidPose.FromToPose(grabber.grabberOrigin * grabber.grabber2hit, new RigidPose(transform));
         grabber.hit2pivot = RigidPose.FromToPose(grabber.grabberOrigin * grabber.grabber2hit, new RigidPose(transform));
 
         if (m_eventGrabberSet == null) { m_eventGrabberSet = new IndexedTable<PointerEventData, Grabber>(); }
@@ -194,12 +196,13 @@ public class Draggable : GrabbableBase<Draggable.Grabber>
             RecordLatestPosesForDrop(Time.time, 0.05f);
             OnGrabTransform();
         }
-
+        /* 
         var scrollDelta = currentGrabber.eventData.scrollDelta * m_scrollingSpeed;
         if (scrollDelta != Vector2.zero)
         {
             currentGrabber.hitDistance = Mathf.Max(0f, currentGrabber.hitDistance + scrollDelta.y);
         }
+        */
         currentGrabber.hitDistance = 0f;
     }
 
