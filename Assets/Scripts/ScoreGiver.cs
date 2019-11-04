@@ -9,9 +9,9 @@ public class ScoreGiver : MonoBehaviour
 {
     [SerializeField] private UnityEvent j_OnAxeCollide;
 
-    private Start()
+    private void Start()
     {
-        j_OnAxeCollide.AddListener();
+        //j_OnAxeCollide.AddListener();
     }
     private void OnTriggerEnter(Collider col) 
     {
