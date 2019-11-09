@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - HitPoint
+  - Free Grab
+  - Snap Toggle
   layers:
   - Default
   - TransparentFX
@@ -14,11 +16,11 @@ TagManager:
   - UI
   - 
   - 
-  - Throwables
-  - Triggers
   - Player
-  - 
-  - 
+  - VRWorld
+  - Hands
+  - Interact
+  - SphereInteract
   - 
   - 
   - 
