@@ -1033,8 +1033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ea746b3681a9e040ad7869fcaafea31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
-  button: 12
+  obj: {fileID: 8296172668267405617}
+  button: 0
 --- !u!1001 &1829483812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1235,17 +1235,17 @@ PrefabInstance:
     - target: {fileID: 69356655364827489, guid: 50bf1b3b2bf780e44949e853f7dfcaa6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69356655364827489, guid: 50bf1b3b2bf780e44949e853f7dfcaa6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.615
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69356655364827489, guid: 50bf1b3b2bf780e44949e853f7dfcaa6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.735
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 69356655364827489, guid: 50bf1b3b2bf780e44949e853f7dfcaa6,
         type: 3}
@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172668267405613}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4de27f8a07624fa4bb7fa09ba9bb07a9, type: 3}
   m_Name: 
@@ -1370,6 +1370,26 @@ MonoBehaviour:
     m_TypeName: Draggable+UnityEventDraggable, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   m_scrollingSpeed: 0.01
+--- !u!138 &8296172668267405616
+FixedJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668267405613}
+  m_ConnectedBody: {fileID: 1769982574}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!4 &8296172668267405617 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 69356655364827489, guid: 50bf1b3b2bf780e44949e853f7dfcaa6,
+    type: 3}
+  m_PrefabInstance: {fileID: 5011612810558356063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8296172668267405619
 MonoBehaviour:
   m_ObjectHideFlags: 0

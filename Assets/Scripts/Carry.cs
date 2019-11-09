@@ -23,8 +23,10 @@ public class Carry : MonoBehaviour
     {
         if(ViveInput.GetPress(setter.viveRole, button) == true)
         {
-             Destroy(obj.GetComponent<FixedJoint>());
-             obj.GetComponent<Rigidbody>().velocity = rbd.velocity;
+            Destroy(obj.GetComponent<FixedJoint>());
+           // obj.gameObject.GetComponent<FixedJoint>().breakForce = 40;
+            //obj.gameObject.GetComponent<FixedJoint>().breakTorque = 40;
+            obj.GetComponent<Rigidbody>().velocity = rbd.velocity;
         }
     }
     void LetGo()
