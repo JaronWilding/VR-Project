@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6044041474250435622}
   - component: {fileID: 6294816295092545883}
   - component: {fileID: 785356479119274717}
-  - component: {fileID: 5158638169577919324}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Handle_LowPoly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +58,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 311f84c2dfeef2a479a591c544064313, type: 2}
+  - {fileID: 2100000, guid: 311f84c2dfeef2a479a591c544064313, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -78,20 +78,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &5158638169577919324
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151989173284645124}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 151567921714062347, guid: 493b6d548da15ad47beaa23081b6661d, type: 3}
 --- !u!1 &3939873806801345394
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +88,8 @@ GameObject:
   m_Component:
   - component: {fileID: 69356655364827489}
   - component: {fileID: 1222086174881702150}
+  - component: {fileID: 8296172668267405615}
+  - component: {fileID: 8296172668267405617}
   m_Layer: 11
   m_Name: Sci-fi_Axe_LowPoly
   m_TagString: Free Grab
@@ -141,6 +129,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &8296172668267405615
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939873806801345394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: -8100887300157360984, guid: 255e805b69d748f43b26da457381993c, type: 3}
+--- !u!114 &8296172668267405617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3939873806801345394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39719f90e5a2c3489f9f812a0bb3ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axeHead_Mesh: {fileID: 5171577117680239929}
+  axeHead_Mat: {fileID: 2100000, guid: 870602a9fbe12b34a863d92710081050, type: 2}
+  axeBody_Mesh: {fileID: 785356479119274717}
+  axeBody_Mat: {fileID: 2100000, guid: 311f84c2dfeef2a479a591c544064313, type: 2}
+  selected_Mat: {fileID: 2100000, guid: d761068fdbddf0e4fad30e1e67b34e99, type: 2}
+  isSelected: 0
+  isThrown: 0
 --- !u!1 &8804218339143525780
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,8 +173,7 @@ GameObject:
   - component: {fileID: 8609366113904937607}
   - component: {fileID: 6293716653022102613}
   - component: {fileID: 5171577117680239929}
-  - component: {fileID: 4585243462391144396}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Axe_LowPoly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,6 +220,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 870602a9fbe12b34a863d92710081050, type: 2}
+  - {fileID: 2100000, guid: 870602a9fbe12b34a863d92710081050, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,17 +240,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4585243462391144396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8804218339143525780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 6116425587469274357, guid: 493b6d548da15ad47beaa23081b6661d, type: 3}
