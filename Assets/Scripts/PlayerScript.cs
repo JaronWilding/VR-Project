@@ -53,9 +53,9 @@ public class PlayerScript : MonoBehaviour
         //Move the camera first.
         MoveCam();
         //Movement of the character
-        MoveChar();
+        //MoveChar();
         //Secondary camera movement - using inputs
-        ControllerMoveCamera();
+        //ControllerMoveCamera();
 
         GroundCheck();
     }
