@@ -12,6 +12,9 @@ public class GrabbableObject : MonoBehaviour
 
     [SerializeField] public bool isSelected;
     [SerializeField] public bool isThrown;
+    [SerializeField] public bool isHolding;
+
+    private AudioSource _soundChop;
 
     private Rigidbody rbd;
 
@@ -30,26 +33,31 @@ public class GrabbableObject : MonoBehaviour
         axeBody_Mats_init = new Material[] { axeBody_Mat };
 
         rbd = GetComponent<Rigidbody>();
+
+        _soundChop = GetComponent<AudioSource>();
     }
     public void Update()
     {
-        if (isThrown == false)
-        {
-            if (isSelected)
-            {
-                Select();
+        
 
-            }
-            else
-            {
-                Deselect();
-            }
+        if (isSelected && !isHolding)
+        {
+            Select();
+        }
+        else
+        {
+            Deselect();
         }
     }
     public void Select()
     {
-        axeHead_Mesh.materials = axeHead_Mats;
-        axeBody_Mesh.materials = axeBody_Mats;
+
+        if (isThrown == false)
+        {
+            axeHead_Mesh.materials = axeHead_Mats;
+            axeBody_Mesh.materials = axeBody_Mats;
+        }
+        
     }
     public void Deselect()
     {
@@ -65,6 +73,7 @@ public class GrabbableObject : MonoBehaviour
             rbd.velocity = Vector3.zero;
             rbd.angularVelocity = Vector3.zero;
             isThrown = false;
+            _soundChop.Play();
         }
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Free Grab
   - Snap Toggle
   - Hands
+  - GameManager
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Interact
   - SphereInteract
   - Outline
-  - 
+  - Renderables
   - 
   - 
   - 

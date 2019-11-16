@@ -59,7 +59,7 @@ public class HandControlTriggersSimplified : MonoBehaviour
             if (alreadyCarrying == false)
             {
                 //Pick up
-                if (selectedObjectBool == true && selectedObject != null && selectedObjectTag == "Free Grab" && selectedObject.GetComponent<GrabbableObject>().isThrown == false)
+                if (selectedObjectBool == true && selectedObject != null && selectedObjectTag == "Free Grab" && selectedObject.GetComponent<GrabbableObject>().enabled && selectedObject.GetComponent<GrabbableObject>().isThrown == false)
                 {
                     Grab(selectedObject, transform.parent, ref alreadyCarrying);
                 }
@@ -131,6 +131,7 @@ public class HandControlTriggersSimplified : MonoBehaviour
         _obj.transform.position = _hand.position;
         _obj.transform.rotation = _hand.rotation * Quaternion.Euler(offsetAmount);
         _obj.transform.SetParent(_hand);
+        _obj.GetComponent<GrabbableObject>().isHolding = true;
     }
     private void Release(GameObject _obj, Transform _hand, Rigidbody _rbd, ref bool _carry)
     {
@@ -158,7 +159,9 @@ public class HandControlTriggersSimplified : MonoBehaviour
                     _obj.GetComponent<Rigidbody>().angularVelocity = angVel * 0.75f;
                     _obj.GetComponent<Rigidbody>().maxAngularVelocity = _obj.GetComponent<Rigidbody>().angularVelocity.magnitude;
                     _obj.GetComponent<GrabbableObject>().isThrown = true;
+                    _obj.GetComponent<GrabbableObject>().isHolding = false;
                     _obj.GetComponent<GrabbableObject>().Deselect();
+
                     break;
                 }
             }
@@ -179,6 +182,7 @@ public class HandControlTriggersSimplified : MonoBehaviour
                     _obj.GetComponent<Rigidbody>().angularVelocity = angVel * 0.75f;
                     _obj.GetComponent<Rigidbody>().maxAngularVelocity = _obj.GetComponent<Rigidbody>().angularVelocity.magnitude;
                     _obj.GetComponent<GrabbableObject>().isThrown = true;
+                    _obj.GetComponent<GrabbableObject>().isHolding = false;
                     _obj.GetComponent<GrabbableObject>().Deselect();
                     
                     break;
